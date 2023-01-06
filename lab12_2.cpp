@@ -8,11 +8,20 @@ int cardScores[] = {0,1,2,3,4,5,6,7,8,9,10,10,10,10};
 
 int drawCard(void){
 	//Write the function to random the number from 1 to 13 and return that random number.
+	return rand() % 12+1;
 }
 
 int calScore(int x,int y,int z){
 	//Write the function to calculate the score with is the rightmost digit of summation of the scores from three cards.
-	//Return the score. 
+	//Return the score.
+	x = drawcard();
+	y = drawcard();
+	z = x + y;
+	while(z >= 10){
+		z = z-10;
+	}
+	return z;
+
 }
 
 int findYugiAction(int s){	
